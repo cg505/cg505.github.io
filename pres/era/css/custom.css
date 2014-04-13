@@ -1,0 +1,18 @@
+p.story {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: justify;
+	text-indent: 75px;
+}
+
+.reveal h3 li {
+	margin-top: 15px;
+}
+
+.reveal img.noborder {
+	border: none;
+}
+
+.reveal .small {
+	font-size: 10pt;
+}
