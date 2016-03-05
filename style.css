@@ -85,6 +85,15 @@ iframe {
 }
 
 .int-link {
-	text-decoration: none;
+    text-decoration-color: rgba(0, 0, 0, 0);
 	font-family: inherit;
+	transition: text-decoration-color .5s;
+    /* animation: link-hover 1s ease; */
+}
+
+.int-link:hover {
+	text-decoration-color: rgba(0, 0, 0, 1);
+    /* animation: link-hover 1s ease; */
+}
+
 }
