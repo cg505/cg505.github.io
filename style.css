@@ -25,16 +25,16 @@ h3 {
 	position: fixed;
 	top: 0px;
 	width: 100%;
-	animation: onload-top 1s ease-out;
+	animation: onload-top 3s ease-in;
 }
 
 @keyframes onload-body {
 	from {
-		margin-left: -10px;
+		margin-top: 140px;
 		opacity: 0;
 	}
 	to {
-		margin-left: 20px;
+		margin-top: 170px;
 		opacity: 1;
 	}
 }
@@ -50,7 +50,7 @@ h3 {
 
 
 #main-container {
-    margin: 163px 20px 20px 20px;
+    margin: 170px 20px 200px 20px;
 	animation: onload-body 1s ease-out;
 }
 
@@ -73,8 +73,18 @@ body {
 a {
 	color: inherit;
 	font-weight: bold;
+	font-family: 'Anonymous Pro',monospace;
 }
 
 iframe {
 	max-width: 800px;
+}
+
+.sm-link {
+	margin-right: 5px;
+}
+
+.int-link {
+	text-decoration: none;
+	font-family: inherit;
 }
