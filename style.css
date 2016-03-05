@@ -1,0 +1,36 @@
+h1,h2 {
+	font-family: 'Anonymous Pro';
+	margin: 0;
+}
+
+h1 {
+	font-size: 40pt;
+}
+
+h2 {
+	font-size: 25pt;
+}
+
+#top-bar {
+	background-color: #00791b;
+	color: #ffffff;
+	margin-top: 0;
+	padding: 30px 20px 15px 20px;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+}
+
+#main-container {
+    margin: 160px 20px 20px 20px;
+}
+
+body {
+	margin:0;
+	font-family: 'Cabin',sans;
+}
+
+#tagline {
+	font-weight: bold;
+	font-size: 15pt;
+}
