@@ -1,5 +1,5 @@
-h1,h2 {
-	font-family: 'Anonymous Pro';
+h1,h2,h3 {
+	font-family: 'Anonymous Pro',monospace;
 	margin: 0;
 }
 
@@ -11,6 +11,12 @@ h2 {
 	font-size: 25pt;
 }
 
+h3 {
+	padding-top: 30px;
+	font-size:20pt;
+	color: #00791b;
+}
+
 #top-bar {
 	background-color: #00791b;
 	color: #ffffff;
@@ -19,18 +25,56 @@ h2 {
 	position: fixed;
 	top: 0px;
 	width: 100%;
+	animation: onload-top 1s ease-out;
 }
 
+@keyframes onload-body {
+	from {
+		margin-left: -10px;
+		opacity: 0;
+	}
+	to {
+		margin-left: 20px;
+		opacity: 1;
+	}
+}
+
+@keyframes onload-top {
+	from {
+        color: #00791b;
+	}
+	to {
+        color: #ffffff;
+	}
+}
+
+
 #main-container {
-    margin: 160px 20px 20px 20px;
+    margin: 163px 20px 20px 20px;
+	animation: onload-body 1s ease-out;
 }
 
 body {
 	margin:0;
-	font-family: 'Cabin',sans;
+    font-family: 'Open Sans',sans;
 }
 
 #tagline {
-	font-weight: bold;
+	/* font-weight: bold; */
 	font-size: 15pt;
+}
+
+.placeholder {
+	position:relative;
+	/* display:none; */
+	top: -133px;
+}
+
+a {
+	color: inherit;
+	font-weight: bold;
+}
+
+iframe {
+	max-width: 800px;
 }
