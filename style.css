@@ -69,15 +69,13 @@ body {
 }
 
 #tagline {
-	/* font-weight: bold; */
-	font-size: 15pt;
+    font-size: 15pt;
 	margin-top: 0;
 }
 
 .placeholder {
 	position:relative;
-	/* display:none; */
-	top: -133px;
+    top: -133px;
 }
 
 a {
@@ -98,12 +96,10 @@ iframe#sc {
     text-decoration-color: rgba(0, 0, 0, 0);
 	font-family: inherit;
 	transition: text-decoration-color .5s;
-    /* animation: link-hover 1s ease; */
 }
 
 .int-link:hover {
 	text-decoration-color: rgba(0, 0, 0, 1);
-    /* animation: link-hover 1s ease; */
 }
 
 @media (max-width: 900px) {
