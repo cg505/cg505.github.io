@@ -3,15 +3,17 @@ h1,h2,h3 {
 	margin: 0;
 }
 
-.concealer {
-	position: relative !important;
-	background-color: #000000 !important;
-	color: rgba(0, 0, 0, 0) !important;
-	z-index: 4 !important;
+h1 {
+	font-size: 40pt;
+	margin-right: 15px;
 }
 
-.concealer .container {
-	padding-bottom: 0 !important;
+h2 {
+	font-size: 25pt;
+}
+
+#cg505 h1, #top-bar h2, #floating-bar h2 {
+	animation: onload-top 3s ease-in;
 }
 
 #stacking-context {
@@ -20,99 +22,85 @@ h1,h2,h3 {
 	z-index: 1;
 }
 
-#top-bar h1, #cg505 h1 {
-	font-size: 40pt;
-}
-
-#top-bar h1 {
-   	color: rgba(0, 0, 0, 0);
-}
-
-.floating-bar .propel {
-	/* top: 0;
-	   left: 0; */
-	position: relative;
-	z-index: 3;
-	background-color: #000000;
-}
-
-#top-bar h2 {
-	font-size: 25pt;
-}
-
-.floating-bar h1 {
-	font-size: 40pt;
-	display: inline;
-	margin-right: 15px;
-}
-
-.floating-bar h2 {
-	font-size: 25pt;
-	display: inline;
-}
-
-h3 {
-	padding-top: 30px;
-	font-size:20pt;
-	color: #00791b;
-}
-
-#cg505 {
+#stacking-context > div {
 	color: #ffffff;
 	margin-top: 0;
-    position: fixed;
 	top: 0px;
 	width: 100%;
+}
+
+#stacking-context .container {
+	max-width: 66%;
+	margin: auto;
+	overflow: hidden;
+	white-space: nowrap;
+	padding: 20px 20px 10px 20px;
+}
+
+#stacking-context > #cg505 {
+    position: fixed;
     z-index: 5;
+	/* background-color: #000000; */
 }
 
 #cg505 > .container {
-	animation: onload-top 3s ease-in;
-	padding: 20px 20px 0px 20px;
-	max-width: 66%;
-	margin: auto;
-	overflow: hidden;
-	white-space: nowrap;
+	padding-bottom: 0px;
 }
 
-#top-bar {
-	background-color: #00791b;
-	color: #ffffff;
-	margin-top: 0;
+#stacking-context > #concealer {
+	color: rgba(0, 0, 0, 0);
     position: relative;
-	top: -93.6px;
-	width: 100%;
-    z-index: 1;
-	box-shadow: -5px -1px 5px #000000;
+	background-color: #00791b;
+	z-index: 4;
 }
 
-#top-bar > .container {
-	animation: onload-top 3s ease-in;
-	padding: 20px 20px 15px 20px;
-	max-width: 66%;
-	margin: auto;
-	overflow: hidden;
-	white-space: nowrap;
+#concealer > .container {
+	padding-bottom: 0px;
 }
 
-.floating-bar {
-	/* background-color: #00791b; */
-	background-color: rgba(0, 0, 0, 0);
-	color: #ffffff;
-	margin-top: 0;
+#stacking-context > #floating-bar {
     position: fixed;
-	top: 0px;
-	width: 100%;
-	z-index: 2;
+	z-index: 3;
+	background-color: #00791b;
 }
 
-.floating-bar > .container {
-	animation: onload-top 3s ease-in;
-	padding: 20px 20px 10px 20px;
-	max-width: 66%;
-	margin: auto;
-	overflow: hidden;
-	white-space: nowrap;
+#floating-bar > .container {
+   	padding-bottom: 0px;
+}
+
+#floating-bar h1, #floating-bar h2 {
+	display: inline;
+}
+
+#floating-bar h1 {
+	color: rgba(0, 0, 0, 0);
+}
+
+#stacking-context > #top-bar {
+    position: relative;
+	z-index: 2;
+	margin-top: -83.6;
+	background-color: #00791b;
+}
+
+#top-bar h1 {
+	color: rgba(0, 0, 0, 0);
+}
+
+#stacking-context > #floating-bar-ext {
+	position: fixed;
+	color: rgba(0, 0, 0, 0);
+	background-color: #00791b;
+	z-index: 1;
+}
+
+@keyframes onload-top {
+	from {
+        color: #00791b;
+	}
+	to {
+        color: #ffffff;
+	}
 }
 
 @keyframes onload-body {
@@ -126,15 +114,11 @@ h3 {
 	}
 }
 
-@keyframes onload-top {
-	from {
-        color: #00791b;
-	}
-	to {
-        color: #ffffff;
-	}
+h3 {
+	padding-top: 30px;
+	font-size:20pt;
+	color: #00791b;
 }
-
 
 #main-container {
     padding: 25px 20px 200px 20px;
