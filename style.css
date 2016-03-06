@@ -3,12 +3,52 @@ h1,h2,h3 {
 	margin: 0;
 }
 
-h1 {
+.concealer {
+	position: relative !important;
+	background-color: #000000 !important;
+	color: rgba(0, 0, 0, 0) !important;
+	z-index: 4 !important;
+}
+
+.concealer .container {
+	padding-bottom: 0 !important;
+}
+
+#stacking-context {
+    top: 0;
+	position: relative;
+	z-index: 1;
+}
+
+#top-bar h1, #cg505 h1 {
 	font-size: 40pt;
 }
 
-h2 {
+#top-bar h1 {
+   	color: rgba(0, 0, 0, 0);
+}
+
+.floating-bar .propel {
+	/* top: 0;
+	   left: 0; */
+	position: relative;
+	z-index: 3;
+	background-color: #000000;
+}
+
+#top-bar h2 {
 	font-size: 25pt;
+}
+
+.floating-bar h1 {
+	font-size: 40pt;
+	display: inline;
+	margin-right: 15px;
+}
+
+.floating-bar h2 {
+	font-size: 25pt;
+	display: inline;
 }
 
 h3 {
@@ -17,18 +57,58 @@ h3 {
 	color: #00791b;
 }
 
-#top-bar {
-	background-color: #00791b;
+#cg505 {
 	color: #ffffff;
 	margin-top: 0;
     position: fixed;
 	top: 0px;
 	width: 100%;
+    z-index: 5;
 }
 
-#top-bar > #container {
+#cg505 > .container {
 	animation: onload-top 3s ease-in;
-	padding: 30px 20px 15px 20px;
+	padding: 20px 20px 0px 20px;
+	max-width: 66%;
+	margin: auto;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+#top-bar {
+	background-color: #00791b;
+	color: #ffffff;
+	margin-top: 0;
+    position: relative;
+	top: -93.6px;
+	width: 100%;
+    z-index: 1;
+	box-shadow: -5px -1px 5px #000000;
+}
+
+#top-bar > .container {
+	animation: onload-top 3s ease-in;
+	padding: 20px 20px 15px 20px;
+	max-width: 66%;
+	margin: auto;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.floating-bar {
+	/* background-color: #00791b; */
+	background-color: rgba(0, 0, 0, 0);
+	color: #ffffff;
+	margin-top: 0;
+    position: fixed;
+	top: 0px;
+	width: 100%;
+	z-index: 2;
+}
+
+.floating-bar > .container {
+	animation: onload-top 3s ease-in;
+	padding: 20px 20px 10px 20px;
 	max-width: 66%;
 	margin: auto;
 	overflow: hidden;
@@ -37,11 +117,11 @@ h3 {
 
 @keyframes onload-body {
 	from {
-		padding-top: 140px;
+		margin-top: -30px;
 		opacity: 0;
 	}
 	to {
-		padding-top: 170px;
+		margin-top: 0px;
 		opacity: 1;
 	}
 }
@@ -57,7 +137,7 @@ h3 {
 
 
 #main-container {
-    padding: 170px 20px 200px 20px;
+    padding: 25px 20px 200px 20px;
 	animation: onload-body 1s ease-out;
 	max-width: 66%;
 	margin: auto;
@@ -103,10 +183,7 @@ iframe#sc {
 }
 
 @media (max-width: 900px) {
-	#top-bar > #container {
-		max-width: 100%;
-	}
-	#main-container {
+	#top-bar > .container, .floating-bar > .container, #main-container {
 		max-width: 100%;
 	}
 }
@@ -114,6 +191,24 @@ iframe#sc {
 @media (max-width: 400px) {
 	h2 {
 		font-size: 18pt;
+	}
+}
+
+@media (max-width: 550px) {
+	.floating-bar h2 {
+		font-size: 18pt;
+	}
+}
+
+@media (max-width: 440px) {
+	.floating-bar h1{
+		font-size: 25pt;
+	}
+	.floating-bar h1, .floating-bar h2 {
+		display: block;
+	}
+	.floating-bar > #container {
+		padding-top: 15px;
 	}
 }
 
