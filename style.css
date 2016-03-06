@@ -167,33 +167,33 @@ iframe#sc {
 }
 
 @media (max-width: 900px) {
-	#top-bar > .container, .floating-bar > .container, #main-container {
+	#stacking-context .container, #main-container {
 		max-width: 100%;
 	}
 }
 
 @media (max-width: 400px) {
-	h2 {
+	#top-bar h2 {
 		font-size: 18pt;
 	}
 }
 
 @media (max-width: 550px) {
-	.floating-bar h2 {
+	#floating-bar h2 {
 		font-size: 18pt;
 	}
 }
 
 @media (max-width: 440px) {
-	.floating-bar h1{
+	#floating-bar h1{
 		font-size: 25pt;
 	}
-	.floating-bar h1, .floating-bar h2 {
-		display: block;
-	}
-	.floating-bar > #container {
-		padding-top: 15px;
-	}
+	/* #cg505 h1, .floating-bar h2 {
+	   display: block;
+	   } */
+	/* #floating-bar > #container {
+	   padding-top: 15px;
+	   } */
 }
 
 .vid-container-container {
