@@ -41,6 +41,7 @@ h2 {
     position: fixed;
     z-index: 5;
 	/* background-color: #000000; */
+	height: 84px;
 }
 
 #cg505 > .container {
@@ -52,6 +53,7 @@ h2 {
     position: relative;
 	background-color: #00791b;
 	z-index: 4;
+	height: 84px;
 }
 
 #concealer > .container {
@@ -62,6 +64,7 @@ h2 {
     position: fixed;
 	z-index: 3;
 	background-color: #00791b;
+	height: 84px;
 }
 
 #floating-bar > .container {
@@ -79,12 +82,14 @@ h2 {
 #stacking-context > #top-bar {
     position: relative;
 	z-index: 2;
-	margin-top: -83.6px;
+	margin-top: -84px;
 	background-color: #00791b;
+	height: 134px;
 }
 
 #top-bar h1 {
 	color: rgba(0, 0, 0, 0);
+	height: 64px;
 }
 
 #stacking-context > #floating-bar-ext {
@@ -92,6 +97,7 @@ h2 {
 	color: rgba(0, 0, 0, 0);
 	background-color: #00791b;
 	z-index: 1;
+	height: 94px;
 }
 
 @keyframes onload-top {
@@ -173,6 +179,9 @@ iframe#sc {
 }
 
 @media (max-width: 400px) {
+	#stacking-context > #top-bar {
+		height: 123px;
+	}
 	#top-bar h2 {
 		font-size: 18pt;
 	}
@@ -210,9 +219,10 @@ iframe#sc {
 	}
 	#floating-bar h1 {
 		font-size: 25pt;
+		height: 40px;
 	}
 	#floating-bar h2 {
-		margin-top: -5px;
+		/* margin-top: x; */
 	}
 	#floating-bar > .container {
 		padding-top: 15px;
@@ -224,10 +234,10 @@ iframe#sc {
 		position: relative;
 	}
 	#stacking-context > #concealer {
-		top: -83.6px;
+		top: -84px;
 	}
 	#stacking-context > #top-bar {
-		margin-top: -167.2px;
+		margin-top: -168px;
 	}
 }
 
