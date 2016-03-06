@@ -79,7 +79,7 @@ h2 {
 #stacking-context > #top-bar {
     position: relative;
 	z-index: 2;
-	margin-top: -83.6;
+	margin-top: -83.6px;
 	background-color: #00791b;
 }
 
@@ -185,15 +185,50 @@ iframe#sc {
 }
 
 @media (max-width: 440px) {
-	#floating-bar h1{
-		font-size: 25pt;
-	}
+	/* #floating-bar h1{
+	   font-size: 25pt;
+	   } */
 	/* #cg505 h1, .floating-bar h2 {
 	   display: block;
 	   } */
 	/* #floating-bar > #container {
 	   padding-top: 15px;
 	   } */
+
+	/* #stacking-context > #top-bar {
+	   z-index: 7;
+	   }
+	   #stacking-context > #floating-bar {
+	   z-index: 6;
+	   } */
+	#floating-bar h1 {
+		color: #ffffff;
+		animation: onload-top 3s ease-in;
+	}
+	#floating-bar h1, #floating-bar h2 {
+		display: block;
+	}
+	#floating-bar h1 {
+		font-size: 25pt;
+	}
+	#floating-bar h2 {
+		margin-top: -5px;
+	}
+	#floating-bar > .container {
+		padding-top: 15px;
+	}
+	#floating-bar-ext {
+		/* display: none; */
+	}
+	#stacking-context > #cg505 {
+		position: relative;
+	}
+	#stacking-context > #concealer {
+		top: -83.6px;
+	}
+	#stacking-context > #top-bar {
+		margin-top: -167.2px;
+	}
 }
 
 .vid-container-container {
