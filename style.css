@@ -44,10 +44,6 @@ h2 {
 	height: 84px;
 }
 
-#cg505 > .container {
-	padding-bottom: 0px;
-}
-
 #stacking-context > #concealer {
 	color: rgba(0, 0, 0, 0);
     position: relative;
