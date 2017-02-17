@@ -13,7 +13,7 @@ h2 {
 }
 
 #cg505 h1, #top-bar h2, #floating-bar h2 {
-	animation: onload-top 3s ease-in;
+	animation: onload-top 2.2s ease-in;
 }
 
 #stacking-context {
@@ -116,6 +116,15 @@ h2 {
 	}
 }
 
+@keyframes onload-img {
+	from {
+		filter: blur(5px);
+	}
+	to {
+		filter: none;
+	}
+}
+
 h3 {
 	padding-top: 30px;
 	font-size:20pt;
@@ -135,8 +144,26 @@ body {
 }
 
 #tagline {
-    font-size: 15pt;
+	position: relative;
 	margin-top: 0px;
+	max-width: 600px;
+}
+
+#tagline img {
+	width: 100%;
+	animation: onload-img 1.5s ease-out;
+}
+
+#tagline p {
+	position: absolute;
+	left: 6%;
+	bottom: 10px;
+	max-width: 220px;
+	width: 50%;
+	color: #fff;
+    font-size: 15pt;
+	margin: 0px;
+	text-shadow: #000 0px 0px 4px;
 }
 
 .placeholder {
@@ -208,7 +235,7 @@ iframe#sc {
 	   } */
 	#floating-bar h1 {
 		color: #ffffff;
-		animation: onload-top 3s ease-in;
+		animation: onload-top 2.2s ease-in;
 	}
 	#floating-bar h1, #floating-bar h2 {
 		display: block;
