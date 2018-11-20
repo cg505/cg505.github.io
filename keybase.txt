@@ -1,0 +1,53 @@
+https://keybase.io/cg505
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://cg505.com
+  * I am cg505 (https://keybase.io/cg505) on keybase.
+  * I have a public key ASAFs6jTjEUNkNxFYNGfaY8pGif03QlNOv8c9barMnsf6go
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012005b3a8d38c450d90dc4560d19f698f291a27f4dd094d3aff1cf5b6ab327b1fea0a",
+      "host": "keybase.io",
+      "kid": "012005b3a8d38c450d90dc4560d19f698f291a27f4dd094d3aff1cf5b6ab327b1fea0a",
+      "uid": "f3cc3e4fc8f43668cc4c0d1e995ca419",
+      "username": "cg505"
+    },
+    "merkle_root": {
+      "ctime": 1542679136,
+      "hash": "0a21849e6ceed1acb8daf6d833be22e76ee8837a580558f7a48ff069c2fb91506fe1b4f4ec81df0d10f96a6411557c9611106f9cf51134ef8920cc8e10c1fcb4",
+      "hash_meta": "b4b9b90b6fd6a56eafeaf3ce6a3dae46fb2120df26b65861dcb430fc50013d76",
+      "seqno": 3980041
+    },
+    "service": {
+      "entropy": "OTcfORXClXCDsVBwUkxzzKmx",
+      "hostname": "cg505.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "2.11.0"
+  },
+  "ctime": 1542679156,
+  "expire_in": 504576000,
+  "prev": "4ee5d84cbfa7fbfa5d9c7f87fade423cc23c8ba22d21b4abc7ef014f898e28c9",
+  "seqno": 26,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgBbOo04xFDZDcRWDRn2mPKRon9N0JTTr/HPW2qzJ7H+oKp3BheWxvYWTESpcCGsQgTuXYTL+n+/pdnH+H+t5CPMI8i6ItIbSrx+8BT4mOKMnEIKYivc0MRC9Ru9HpuFj/yVkedyk+RVnk0Qny6FrTZZKlAgHCo3NpZ8RATdj0WNmwq/4m9BcFftCgqDu9/tmOB+il7L9hLnF4WvBHtjiZ1yv9EFuju/+N3f6pKo/ppMEB5kfM0AVx8EJUAKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEICAaimDYegmchPJjH42sCikPDZP45etVyBLhTgf1LiSqo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/cg505
