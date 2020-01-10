@@ -2,7 +2,7 @@
 ---
 <!doctype html>
 
-<title>{{ page.title }} | cg505's blog</title>
+<title>cg505's blog</title>
 <link rel="stylesheet" href="/style.css">
 <link rel="stylesheet" href="/blog.css">
 <link href='https://fonts.googleapis.com/css?family=Anonymous+Pro:700' rel='stylesheet' type='text/css'>
@@ -10,24 +10,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
 
-<div id="main-container">
-	<h1>{{ page.title }}</h1>
-	{% if page.summary %}
-		<h3>{{ page.summary }}</h3>
-	{% endif %}
-	<p class="post-info">published {{ page.date | date: '%F' }} by <a href="/">christopher cooper</a></p>
-
-	{{ content }}
-</div>
-
 <a id="blog-banner" href="/blog">
 	<div class="container">
-		<h2>cg505's blog</h2>
+		<h1>cg505's blog</h1>
 	</div>
 </a>
 
-<div class="container">
+<div id="main-container">
+	<p>writings of christopher cooper</p>
 	{% include sm-links.html %}
+	<h2>recent posts</h2>
+	{% for post in site.posts %}
+		<a href="{{ post.url }}">
+			<h3 class="list-title">{{ post.title }}</h3>
+		</a>
+		<p class="post-info small">published {{ post.date | date: '%F' }}</p>
+		{% if post.summary %}
+			<p class="list-summary">{{ post.summary }}</h4>
+		{% endif %}
+	{% endfor %}
 
 	<p id="copyright">© Christopher Cooper 2020</p>
 </div>

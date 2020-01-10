@@ -1,10 +1,12 @@
+---
+---
 <!doctype html>
 
 <title>cg505 | christopher cooper</title>
 <link rel="stylesheet" href="/style.css">
-<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="/index.css">
 <link href='https://fonts.googleapis.com/css?family=Anonymous+Pro:700' rel='stylesheet' type='text/css'>
-<link rel="shortcut icon" type="image/png" href="cg_avatar_230.png">
+<link rel="shortcut icon" type="image/png" href="/cg_avatar_230.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
 
@@ -60,15 +62,24 @@
 		I'm a senior at UC Berkeley. I love to <a href="#code" class="int-link">code</a> and make <a href="#music" class="int-link">music</a>. I <a href="#capitalism" class="int-link">work</a> as a software engineer. Want to <a href="#contact" class="int-link">get in touch</a>?
 	</p>
 
-	<p class="sm-links">
-		<a href="/resume.pdf">resume</a>
-		<a rel="me" href="https://github.com/cg505">github</a>
-		<a rel="me" href="https://linkedin.com/in/cg505">linkedin</a>
-		<a rel="me" href="https://soundcloud.com/cg505">soundcloud</a>
-		<a rel="me" href="https://open.spotify.com/user/cg505">spotify</a>
-		<a rel="me" href="https://last.fm/user/cg505">last.fm</a>
-		<a rel="me" href="https://keybase.io/cg505">keybase</a>
-	</p>
+	{% include sm-links.html resume=true %}
+
+
+	<h3>
+		blog
+	</h3>
+	{% for post in site.posts limit: 3 %}
+		<p class="home-post-title">
+			<a href="{{ post.url }}">{{ post.title }}</a>
+		</p>
+		<p class="home-post-summary">
+			{{ post.date | date: '%F' }}
+			{%- if post.summary -%}
+				: {{ post.summary }}
+			{%- endif -%}
+		</p>
+	{% endfor %}
+	<p><a href="/blog">More posts...</a></p>
 
 
 	<div id="code" class="placeholder"></div>

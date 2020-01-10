@@ -1,7 +1,21 @@
+.list-title {
+	margin-bottom: 5px;
+}
+
 .post-info {
 	font-family: 'Anonymous Pro',monospace;
-	color: #333;
+	color: #767676;
 	font-size: 16pt;
+}
+
+.post-info.small {
+	font-size: 12pt;
+	margin: 0;
+}
+
+.list-summary {
+	font-size: 16pt;
+	margin-top: 10px;
 }
 
 .signoff {
@@ -10,7 +24,7 @@
 	color: #00791b;
 }
 
-a#blog-banner {
+#blog-banner {
 	background-color: #00791b;
 	width: 100%;
 	text-decoration: none;
@@ -23,7 +37,11 @@ a#blog-banner {
 	padding: 10px 20px;
 }
 
-#blog-banner h2 {
+#blog-banner .container {
+	padding-top: 20px;
+}
+
+#blog-banner h1, #blog-banner h2 {
 	margin: 0;
 	color: #fff;
 }

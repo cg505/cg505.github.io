@@ -265,3 +265,11 @@ iframe#sc {
 	width: 100%;
 	height: 100%;
 }
+
+.home-post-title {
+    margin-bottom: 3px;
+}
+
+.home-post-summary {
+    margin-top: 0;
+}
