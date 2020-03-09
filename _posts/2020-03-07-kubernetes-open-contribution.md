@@ -4,7 +4,7 @@ summary: |
   Talk: How we use Kubernetes at OCF to encourage contribution,
   presented at the UC Berkeley Cloud Meetup.
 ---
-This January, my fellow OCF officers Patricia Janus and Ja Wattanawong gave a talk at the [UC Berkeley Cloud Computing Meetup](https://cto.berkeley.edu/cloud/community/meetup).
+This January, I gave a talk with my fellow OCF officers Patricia Hanus and Ja Wattanawong at the [UC Berkeley Cloud Computing Meetup](https://cto.berkeley.edu/cloud/community/meetup).
 
 The [OCF](https://www.ocf.berkeley.edu/) is a student-run, volunteer organization, and we run a lot of stuff.
 Everything we do is oriented around making sure it is easy for volunteers to jump in and start contributing.
