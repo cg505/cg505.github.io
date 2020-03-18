@@ -1,1 +1,9 @@
 permalink: /blog/:year/:month/:title/
+plugins:
+  - jekyll-feed
+#author: 'Christopher Cooper'
+title: "cg505's blog"
+description: writings of christopher cooper
+author:
+  name: Christopher Cooper
+  uri: 'https://cg505.com'

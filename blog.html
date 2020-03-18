@@ -2,22 +2,23 @@
 ---
 <!doctype html>
 
-<title>cg505's blog</title>
+<title>{{ site.title }}</title>
 <link rel="stylesheet" href="/style.css">
 <link rel="stylesheet" href="/blog.css">
 <link href='https://fonts.googleapis.com/css?family=Anonymous+Pro:700' rel='stylesheet' type='text/css'>
 <link rel="shortcut icon" type="image/png" href="/cg_avatar_230.png">
+{% feed_meta %}
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
 
 <a id="blog-banner" href="/blog">
 	<div class="container">
-		<h1>cg505's blog</h1>
+		<h1>{{ site.title }}</h1>
 	</div>
 </a>
 
 <div id="main-container">
-	<p>writings of christopher cooper</p>
+	<p>{{ site.description }}</p>
 	{% include sm-links.html %}
 	<h2>recent posts</h2>
 	{% for post in site.posts %}
@@ -26,9 +27,11 @@
 		</a>
 		<p class="post-info small">published {{ post.date | date: '%F' }}</p>
 		{% if post.summary %}
-			<p class="list-summary">{{ post.summary }}</h4>
+			<p class="list-summary">{{ post.summary }}</p>
 		{% endif %}
 	{% endfor %}
+
+	<p style="margin-top: 35px"><a href="/feed.xml">atom feed</a></p>
 
 	<p id="copyright">© Christopher Cooper 2020</p>
 </div>
