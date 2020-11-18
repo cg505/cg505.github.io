@@ -10,6 +10,12 @@ h1 {
 	animation: onload-top 2.2s ease-in;
 }
 
+@media (prefers-reduced-motion) {
+	#cg505 h1, #top-bar h2, #floating-bar h2 {
+		animation: none;
+	}
+}
+
 #stacking-context {
     top: 0px;
 	position: relative;
@@ -127,6 +133,12 @@ h3 {
 	animation: onload-body 1s ease-out;
 }
 
+@media (prefers-reduced-motion) {
+	#main-container {
+		animation: none;
+	}
+}
+
 #header #mobile-nav {
 	text-align: justify;
 	width: 100%;
@@ -150,6 +162,12 @@ h3 {
 	margin-top: 10px;
 	width: 100%;
 	animation: onload-img 1.5s ease-out;
+}
+
+@media (prefers-reduced-motion) {
+	#header img {
+		animation: none;
+	}
 }
 
 #header #tagline {
@@ -214,6 +232,11 @@ iframe#sc {
 	#floating-bar h1 {
 		color: #ffffff;
 		animation: onload-top 2.2s ease-in;
+	}
+	@media (prefers-reduced-motion) {
+		#floating-bar h1 {
+			animation: none;
+		}
 	}
 	#floating-bar h1, #floating-bar h2 {
 		display: block;
