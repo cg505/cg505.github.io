@@ -17,15 +17,15 @@ h3 {
 }
 
 #main-container {
-    padding: 15px 20px;
+	padding: 15px 20px;
 	max-width: 66%;
 	margin: auto;
 }
 
 body {
 	margin: 0px;
-    padding-bottom: 140px;
-    font-family: 'Open Sans',sans-serif;
+	padding-bottom: 140px;
+	font-family: 'Open Sans',sans-serif;
 }
 
 #header {
@@ -45,7 +45,7 @@ a {
 }
 
 .int-link {
-    text-decoration-color: rgba(0, 0, 0, 0);
+	text-decoration-color: rgba(0, 0, 0, 0);
 	font-family: inherit;
 	transition: text-decoration-color .5s;
 }
@@ -79,7 +79,7 @@ a {
 }
 
 .vid-container.slides {
-    padding-bottom: calc(56.25% + 29px);
+	padding-bottom: calc(56.25% + 29px);
 }
 
 .vid-container iframe, .video-container object, .video-container embed {

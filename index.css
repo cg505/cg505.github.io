@@ -17,7 +17,7 @@ h1 {
 }
 
 #stacking-context {
-    top: 0px;
+	top: 0px;
 	position: relative;
 	z-index: 1;
 }
@@ -38,15 +38,15 @@ h1 {
 }
 
 #stacking-context > #cg505 {
-    position: fixed;
-    z-index: 5;
+	position: fixed;
+	z-index: 5;
 	/* background-color: #000000; */
 	height: 84px;
 }
 
 #stacking-context > #concealer {
 	color: rgba(0, 0, 0, 0);
-    position: relative;
+	position: relative;
 	background-color: #00791b;
 	z-index: 4;
 	height: 84px;
@@ -57,14 +57,14 @@ h1 {
 }
 
 #stacking-context > #floating-bar {
-    position: fixed;
+	position: fixed;
 	z-index: 3;
 	background-color: #00791b;
 	height: 84px;
 }
 
 #floating-bar > .container {
-   	padding-bottom: 0px;
+	padding-bottom: 0px;
 }
 
 #floating-bar h1, #floating-bar h2 {
@@ -76,7 +76,7 @@ h1 {
 }
 
 #stacking-context > #top-bar {
-    position: relative;
+	position: relative;
 	z-index: 2;
 	margin-top: -84px;
 	background-color: #00791b;
@@ -98,10 +98,10 @@ h1 {
 
 @keyframes onload-top {
 	from {
-        color: #00791b;
+		color: #00791b;
 	}
 	to {
-        color: #ffffff;
+		color: #ffffff;
 	}
 }
 
@@ -153,9 +153,9 @@ h3 {
 }
 
 #header #mobile-nav:after {
-    content: '';
-    display: inline-block;
-    width: 100%;
+	content: '';
+	display: inline-block;
+	width: 100%;
 }
 
 #header img {
@@ -177,14 +177,14 @@ h3 {
 	max-width: 220px;
 	width: 50%;
 	color: #fff;
-    font-size: 15pt;
+	font-size: 15pt;
 	margin: 0px;
 	text-shadow: #000 0px 0px 4px;
 }
 
 .placeholder {
 	position:relative;
-    top: -80px;
+	top: -80px;
 }
 
 iframe#sc {
@@ -270,9 +270,9 @@ iframe#sc {
 }
 
 .home-post-title {
-    margin-bottom: 3px;
+	margin-bottom: 3px;
 }
 
 .home-post-summary {
-    margin-top: 0;
+	margin-top: 0;
 }
