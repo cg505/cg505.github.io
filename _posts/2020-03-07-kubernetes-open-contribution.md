@@ -1,4 +1,5 @@
 ---
+permalink: '/blog/2020/03/kubernetes-open-contribution/'
 title: 'Kubernetes and open contribution at OCF'
 summary: |
   Talk: How we use Kubernetes at OCF to encourage contribution,

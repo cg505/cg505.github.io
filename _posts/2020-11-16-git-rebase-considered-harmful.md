@@ -1,4 +1,5 @@
 ---
+permalink: '/blog/2020/11/git-rebase-considered-harmful/'
 title: 'stop rebasing'
 summary: Rebasing is in vogue. But if we don't stop to think before rewriting our history, it will just end up causing us pain in the future.
 ---
