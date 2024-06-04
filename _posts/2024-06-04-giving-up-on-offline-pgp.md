@@ -20,4 +20,4 @@ If you want to reach me securely, please don't send me an encrypted email. Messa
 
 <p class="signoff">&mdash; cg505</p>
 
-[^dn42-keys]:  You _can_ also use SSH keys to sign dn42 changes, but this feels like a misuse of SSH keys. I want my SSH keys to do one thing (authenticate me to SSH servers) and nothing else. I'd rather use PGP keys since they're at least designed to be general-purpose, for better or worse. This argument gernalizes to all use of SSH for signing git commits.
+[^dn42-keys]:  You _can_ also use SSH keys to sign dn42 changes, but this feels like a misuse of SSH keys. I want my SSH keys to do one thing (authenticate me to SSH servers) and nothing else. I'd rather use PGP keys since they're at least designed to be general-purpose, for better or worse. This argument gernalizes to all use of SSH keys for signing git commits.
