@@ -18,7 +18,7 @@ h3 {
 
 #main-container {
 	padding: 15px 20px;
-	max-width: 66%;
+	max-width: min(66%, 800px);
 	margin: auto;
 }
 

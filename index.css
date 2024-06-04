@@ -30,7 +30,7 @@ h1 {
 }
 
 #stacking-context .container {
-	max-width: 66%;
+	max-width: min(66%, 800px);
 	margin: auto;
 	overflow: hidden;
 	white-space: nowrap;
