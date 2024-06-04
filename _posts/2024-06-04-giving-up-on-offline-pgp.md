@@ -6,7 +6,7 @@ In 2018, I revamped my PGP keys, deprecating old keys that were created when I w
 
 Well, my subkeys expired in 2020, and because it was such a PITA to fix, I just let them expire. To be fair, there was a pandemic going on. But I also never got around to it in any of the four years that followed.
 
-In that time, I gave up on PGP in general. I read [The PGP Problem](https://www.latacora.com/blog/2019/07/16/the-pgp-problem/) and [Filippo's blog post](https://words.filippo.io/giving-up-on-long-term-pgp/). [SKS died](https://gist.github.com/rjhansen/67ab921ffb4084c865b3618d6955275f), and we had to [kill the keyserver I helped run](https://github.com/ocf/puppet/pull/1075). So, I didn't have much incentive to preserve my PGP keys.
+In that time, I gave up on PGP in general. I read [The PGP Problem](https://www.latacora.com/blog/2019/07/16/the-pgp-problem/) and [Filippo's blog post](https://words.filippo.io/giving-up-on-long-term-pgp/). [SKS died](https://gist.github.com/rjhansen/67ab921ffb4084c865b3618d6955275f), and we had to [kill the keyserver I helped run](https://github.com/ocf/puppet/issues/816). So, I didn't have much incentive to preserve my PGP keys.
 
 But, eventually I realized that they can be useful. PGP keys are still frequently used for package signing or verification of git commits. I'd like to join [dn42](https://dn42.dev), and they use PGP keys to prevent AS or IP space takeovers instead of relying on LOAs (lol).[^dn42-keys] Like it or not, in many spaces, PGP is the established default.
 
