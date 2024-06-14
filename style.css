@@ -1,5 +1,41 @@
+@font-face {
+	font-family: 'Azeret Mono';
+	font-style: italic;
+	font-weight: 100 900;
+	font-display: swap;
+	src:
+		local("Azeret Mono"),
+		url(/font/AzeretMono/AzeretMono-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+	font-family: 'Azeret Mono';
+	font-style: normal;
+	font-weight: 100 900;
+	font-display: swap;
+	src:
+		local("Azeret Mono"),
+		url(/font/AzeretMono/AzeretMono-VariableFont_wght.ttf);
+}
+
+@font-feature-values Azeret Mono {
+	@styleset {
+		/* This is not exhaustive, just the ones I care about.
+		   Grabbed using https://wakamaifondue.com/ */
+		simple-a: 1;
+		upright-M: 9;
+		straight-y: 15;
+	}
+}
+
 h1,h2,h3 {
-	font-family: 'Anonymous Pro',monospace;
+	/* Fallback fonts help avoid broken stacking context during FOUC.
+	   Notably, Noto Sans Mono doesn't work. Other monospace styles can safely
+	   just use monospace family. */
+	font-family: 'Azeret Mono', 'Anonymous Pro', 'DejaVu Sans Mono', 'Liberation Mono', 'Fira Mono', 'Fira Code', monospace;
+	font-variant-alternates: styleset(simple-a, upright-M, straight-y);
+	font-variant-ligatures: discretionary-ligatures;
+	font-weight: normal;
 }
 
 h1 {
@@ -25,7 +61,12 @@ h3 {
 body {
 	margin: 0px;
 	padding-bottom: 140px;
-	font-family: 'Open Sans',sans-serif;
+	font-family:
+		'Open Sans',
+		'Cantarell',
+		'IBM Plex Sans',
+		'Source Sans 3', 'Source Sans', 'Source Sans Pro', 'Source Sans Variable' /* what a mess lol */,
+		sans-serif;
 }
 
 #header {
@@ -35,23 +76,37 @@ body {
 }
 
 a {
+	color: #00791b;
+}
+
+a.mono-link {
 	color: inherit;
-	font-weight: bold;
-	font-family: 'Anonymous Pro',monospace;
+	font-family: 'Azeret Mono', monospace;
+	font-variant-alternates: styleset(/* leave double-story a for small legibility */ upright-M, straight-y);
+	font-variant-ligatures: discretionary-ligatures;
+	font-weight: 500;
 }
 
 .sm-links > a {
 	margin-right: 8px;
 }
 
-.int-link {
+a.int-link {
 	text-decoration-color: rgba(0, 0, 0, 0);
 	font-family: inherit;
 	transition: text-decoration-color .5s;
 }
 
-.int-link:hover {
-	text-decoration-color: rgba(0, 0, 0, 1);
+a.int-link:hover {
+	text-decoration-color: revert;
+	transition: text-decoration-color 0s;
+}
+
+code {
+	font-family: 'Azeret Mono', monospace;
+	font-variant-alternates: styleset(straight-a, upright-M, straight-y);
+	font-variant-ligatures: none;
+	font-variant-numeric: slashed-zero;
 }
 
 @media (max-width: 900px) {

@@ -5,7 +5,6 @@
 <title>cg505 | christopher cooper</title>
 <link rel="stylesheet" href="/style.css">
 <link rel="stylesheet" href="/index.css">
-<link href='https://fonts.googleapis.com/css?family=Anonymous+Pro:700' rel='stylesheet' type='text/css'>
 <link rel="shortcut icon" type="image/png" href="/cg_avatar_230.png">
 {% feed_meta %}
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -72,7 +71,7 @@
 	</h3>
 	{% for post in site.posts limit: 3 %}
 		<p class="home-post-title">
-			<a href="{{ post.url }}">{{ post.title }}</a>
+			<a href="{{ post.url }}" class="mono-link">{{ post.title }}</a>
 		</p>
 		<p class="home-post-summary">
 			{{ post.date | date: '%F' }}
@@ -81,7 +80,7 @@
 			{%- endif -%}
 		</p>
 	{% endfor %}
-	<p><a href="/blog">more posts...</a></p>
+	<p><a href="/blog" class="mono-link">more posts...</a></p>
 
 	<div id="code" class="placeholder"></div>
 	<h3>

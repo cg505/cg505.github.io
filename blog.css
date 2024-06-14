@@ -3,7 +3,9 @@
 }
 
 .post-info {
-	font-family: 'Anonymous Pro',monospace;
+	font-family: 'Azeret Mono', monospace;
+	font-variant-alternates: styleset(simple-a, upright-M, straight-y);
+	font-variant-ligatures: discretionary-ligatures;
 	color: #767676;
 	font-size: 16pt;
 }

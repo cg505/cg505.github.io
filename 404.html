@@ -1,26 +1,44 @@
 <!doctype html>
 
 <title>page not found</title>
-<link href='https://fonts.googleapis.com/css?family=Anonymous+Pro:700' rel='stylesheet' type='text/css'>
 <style>
- body {
-	 background-color: #eee;
-	 font-family: 'Open Sans',sans-serif;
-	 text-align: center;
- }
- h1 {
-	 color: #00791b;
-	 font-family: 'Anonymous Pro', monospace;
-	 font-size: 70px;
-	 margin-bottom: 20px;
- }
- h2 {
-	 color: #444;
-	 font-size: 30px;
- }
- a {
-	 color: #00791b;
- }
+@font-face {
+	font-family: 'Azeret Mono';
+	font-style: normal;
+	font-weight: 100 900;
+	font-display: swap;
+	src:
+		local("Azeret Mono"),
+		url(/font/AzeretMono/AzeretMono-VariableFont_wght.ttf);
+}
+body {
+	background-color: #eee;
+	font-family:
+		'Open Sans',
+		'Cantarell',
+		'IBM Plex Sans',
+		'Source Sans 3', 'Source Sans', 'Source Sans Pro', 'Source Sans Variable' /* what a mess lol */,
+		sans-serif;
+	text-align: center;
+}
+h1, h2 {
+	font-family: 'Azeret Mono', monospace;
+	font-variant-alternates: styleset(simple-a, upright-M, straight-y);
+	font-variant-ligatures: discretionary-ligatures;
+}
+h1 {
+	color: #00791b;
+	font-weight: normal;
+	font-size: 70px;
+	margin-bottom: 20px;
+}
+h2 {
+	color: #444;
+	font-size: 30px;
+}
+a {
+	color: #00791b;
+}
 </style>
 
 <h1>404</h1>
