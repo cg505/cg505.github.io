@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow: /resume/
+
+Sitemap: https://cg505.com/sitemap.xml

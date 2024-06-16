@@ -1,9 +1,16 @@
 permalink: /blog/:title/
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 #author: 'Christopher Cooper'
 title: "cg505's blog"
 description: writings of christopher cooper
 author:
   name: Christopher Cooper
   uri: 'https://cg505.com'
+defaults:
+  -
+    scope:
+      path:            "resume/*.pdf"
+    values:
+      sitemap:         false
