@@ -197,7 +197,7 @@ iframe#sc {
 	}
 }
 
-@media (max-width: 400px) {
+@media (max-width: 440px) {
 	#stacking-context > #top-bar {
 		height: 123px;
 	}
@@ -206,13 +206,13 @@ iframe#sc {
 	}
 }
 
-@media (max-width: 550px) {
+@media (max-width: 630px) {
 	#floating-bar h2 {
 		font-size: 18pt;
 	}
 }
 
-@media (max-width: 440px) {
+@media (max-width: 520px) {
 	/* #floating-bar h1{
 	   font-size: 25pt;
 	   } */
