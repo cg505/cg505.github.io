@@ -1,12 +1,15 @@
 ---
 ---
 <!doctype html>
-
+<html lang="en">
 <title>{{ page.title }} | cg505's blog</title>
 <link rel="stylesheet" href="/style.css">
 <link rel="stylesheet" href="/blog.css">
 <link rel="shortcut icon" type="image/png" href="/cg_avatar_230.png">
 {% feed_meta %}
+{% if page.summary %}
+	<meta name="description" content="{{ page.summary }}">
+{% endif %}
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
 
@@ -31,3 +34,4 @@
 
 	<p id="copyright">© Christopher Cooper {{ page.date | date: '%Y' }}</p>
 </div>
+</html>
