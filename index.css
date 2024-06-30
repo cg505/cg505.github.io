@@ -47,7 +47,7 @@ h1 {
 #stacking-context > #concealer {
 	color: rgba(0, 0, 0, 0);
 	position: relative;
-	background-color: #00791b;
+	background-color: var(--background-green);
 	z-index: 4;
 	height: 84px;
 }
@@ -59,7 +59,7 @@ h1 {
 #stacking-context > #floating-bar {
 	position: fixed;
 	z-index: 3;
-	background-color: #00791b;
+	background-color: var(--background-green);
 	height: 84px;
 }
 
@@ -79,7 +79,7 @@ h1 {
 	position: relative;
 	z-index: 2;
 	margin-top: -84px;
-	background-color: #00791b;
+	background-color: var(--background-green);
 	height: 134px;
 }
 
@@ -91,14 +91,14 @@ h1 {
 #stacking-context > #floating-bar-ext {
 	position: fixed;
 	color: rgba(0, 0, 0, 0);
-	background-color: #00791b;
+	background-color: var(--background-green);
 	z-index: 1;
 	height: 94px;
 }
 
 @keyframes onload-top {
 	from {
-		color: #00791b;
+		color: var(--background-green);
 	}
 	to {
 		color: #ffffff;

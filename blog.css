@@ -23,11 +23,11 @@
 .signoff {
 	text-align: right;
 	font-style: italic;
-	color: #00791b;
+	color: var(--green-text);
 }
 
 #blog-banner {
-	background-color: #00791b;
+	background-color: var(--background-green);
 	width: 100%;
 	text-decoration: none;
 	display: block;

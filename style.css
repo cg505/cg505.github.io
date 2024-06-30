@@ -28,6 +28,21 @@
 	}
 }
 
+:root {
+	--background-green: #00791b;
+	--green-text: #00791b;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--green-text: #00cc2c;
+	}
+	body {
+		background-color: #222;
+		color: white;
+	}
+}
+
 h1,h2,h3 {
 	/* Fallback fonts help avoid broken stacking context during FOUC.
 	   Notably, Noto Sans Mono doesn't work. Other monospace styles can safely
@@ -49,7 +64,7 @@ h2 {
 
 h3 {
 	font-size: 20pt;
-	color: #00791b;
+	color: var(--green-text);
 }
 
 #main-container {
@@ -75,7 +90,7 @@ body {
 }
 
 a {
-	color: #00791b;
+	color: var(--green-text);
 }
 
 a.mono-link {
