@@ -1,7 +1,7 @@
 ---
 permalink: '/blog/2020/11/git-rebase-considered-harmful/'
 title: 'stop rebasing'
-summary: Rebasing is in vogue. But if we don't stop to think before rewriting our history, it will just end up causing us pain in the future.
+summary: Rebasing should be saved for special occasions.
 ---
 _okay, okay._ Maybe the title is a bit strong. I'm describing a phenomenon in which people believe that your git history should _always_ be a straight line, and that rebasing is always preferable to merging. That philosophy runs into problems really quickly. I've personally lost many hours of my time dealing with this in a project at a well-known company. How? Let's start with the background.
 
@@ -31,8 +31,6 @@ The reason this gets messy so fast is quite simple: **in order to merge divergin
 The logical conclusion is that when you rebase and force-push, you must be confident that NOBODY ELSE has checked out the branch that you're rebasing. You must never rebase and force-push your main branch. Rebasing is a very powerful tool that you _should_ use, but ONLY on your own branches, ideally before they're ever been pushed.
 
 You may be thinking: "Why would anyone force-push a shared branch? Isn't this a case of disproportionate outrage over a tiny issue?" People get in the mindset of "rebase, never merge", and it is really easy for this to happen. I was on a team that was about 100 commits into a fork of an open source project, when there were some upstream changes that we wanted to pull in. I went ahead and set up the merge, resolved the conflicts, and opened a PR. However, the tech lead told me that they preferred to rebase *everything in our fork* on top of the upstream master. You should be able to identify this as a violation of the "don't force-push shared branches" rule. It meant that every active feature branch had to be rebased on top of the new fork, which caused dozens of conflicts each time. What did we have to show for it? A cleaner commit graph. Not worth it.
-
-<p class="signoff">&mdash; cg505</p>
 
 [^main]: I use main to refer to your primary development branch, whether you call it `main`, `develop`, `master`, or whatever else.
 

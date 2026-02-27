@@ -2,10 +2,10 @@
 ---
 <!doctype html>
 <html lang="en">
-<title>{{ page.title }} | cg505's blog</title>
+<title>{{ page.title }} | christopher's blog</title>
 <link rel="stylesheet" href="/style.css">
-<link rel="stylesheet" href="/blog.css">
-<link rel="shortcut icon" type="image/png" href="/cg_avatar_230.png">
+<link rel="alternate icon" type="image/png" href="/favicon.png">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 {% feed_meta %}
 {% if page.summary %}
 	<meta name="description" content="{{ page.summary }}">
@@ -16,23 +16,18 @@
     <meta property="og:image" content="{{ page.image }}">
 {% endif %}
 
-<div id="main-container">
-	<h1>{{ page.title }}</h1>
+<h1 id="top" class="center-width wide" >{{ page.title }}</h1>
+<div id="main-container" class="center-width wide">
 	{% if page.summary %}
-		<h3>{{ page.summary }}</h3>
+		<p>{{ page.summary }}</p>
 	{% endif %}
 	<p class="post-info">published {{ page.date | date: '%F' }} by <a href="/">christopher cooper</a></p>
 
 	{{ content }}
 </div>
 
-<a id="blog-banner" href="/blog">
-	<div class="container">
-		<h2>cg505's blog</h2>
-	</div>
+<div class="center-width wide">
+	<a href="/blog" class="display-link">more posts…</a>
 </a>
 
-<div class="container">
-	{% include sm-links.html %}
-</div>
 </html>

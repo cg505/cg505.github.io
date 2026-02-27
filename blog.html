@@ -4,30 +4,30 @@
 <html lang="en">
 <title>{{ site.title }}</title>
 <link rel="stylesheet" href="/style.css">
-<link rel="stylesheet" href="/blog.css">
-<link rel="shortcut icon" type="image/png" href="/cg_avatar_230.png">
+<link rel="alternate icon" type="image/png" href="/favicon.png">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 {% feed_meta %}
 <meta name="description" content="Recent blog posts from Christopher Cooper.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
 
-<a id="blog-banner" href="/blog">
-	<div class="container">
-		<h1>{{ site.title }}</h1>
-	</div>
-</a>
-
-<div id="main-container">
-	<p>{{ site.description }}</p>
+<h1 id="top" class="center-width wide">{{ site.title }}</h1>
+<div id="main-container" class="center-width wide">
+	<!-- <p>{{ site.description }}</p> -->
+	{% comment %}
 	{% include sm-links.html %}
-	<h2>recent posts</h2>
+	{% endcomment %}
+	<a class="display-link" href="/">about me</a>
+	<span>/</span>
+	<a class="display-link" rel="me" href="https://notes.cg505.com">notes</a>
+	<h2>all posts</h2>
 	{% for post in site.posts %}
-		<a href="{{ post.url }}">
-			<h3 class="list-title">{{ post.title }}</h3>
-		</a>
-		<p class="post-info small">published {{ post.date | date: '%F' }}</p>
+		<p class="post-info">
+			<a class="post-title" href="{{ post.url }}">{{ post.title }}</a>
+			<span>{{ post.date | date: '%F' }}</span>
+		</p>
 		{% if post.summary %}
-			<p class="list-summary">{{ post.summary }}</p>
+			<p class="post-summary">{{ post.summary }}</p>
 		{% endif %}
 	{% endfor %}
 

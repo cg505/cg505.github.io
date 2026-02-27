@@ -25,5 +25,3 @@ The slides in the video are difficult to see, but you can follow along:
 		<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRl7wSHjN4x_OPBvSRiLWAjVKOIueCa8aDJBiJzqn-Ziq4gFBWNrorCWNMJFeY7bmDV9oOn93gQQgyZ/embed?start=false&loop=false&delayms=60000" frameborder="0" width="560" height="344" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 	</div>
 </div>
-
-<p class="signoff">&mdash; cg505</p>

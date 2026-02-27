@@ -2,123 +2,83 @@
 ---
 <!doctype html>
 <html lang="en">
-<title>cg505 | christopher cooper</title>
+<title>christopher cooper</title>
 <link rel="stylesheet" href="/style.css">
-<link rel="stylesheet" href="/index.css">
-<link rel="icon" type="image/png" href="/cg_avatar_230.png">
+<link rel="alternate icon" type="image/png" href="/favicon.png">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 {% feed_meta %}
 <meta name="description" content="My personal site. Software engineer, formerly Databricks, UC Berkeley, Open Computing Facility. Learn more about my work or contact me!">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
 <meta property="og:image" content="/me.jpg">
 
-<div id="stacking-context">
-	<div id="cg505">
-		<div class="container">
-			<h1>cg505</h1>
-		</div>
-	</div>
-	<div id="concealer">
-		<div class="container">
-			<h1>cg505</h1>
-		</div>
-	</div>
-	<div id="floating-bar">
-		<div class="container">
-			<h1>cg505</h1>
-			<h2>christopher cooper</h2>
-		</div>
-	</div>
-	<div id="top-bar">
-		<div class="container">
-			<h1>cg505</h1>
-			<h2>christopher cooper</h2>
-		</div>
-	</div>
-	<div id="floating-bar-ext">
-		<div class="container">
-			<h1>cg505</h1>
-		</div>
-	</div>
-</div>
-<div id="main-container">
-	<div id="header">
-		<p id="mobile-nav">
-			<a href="#code" class="int-link">code</a>
-			<!--<a href="#music" class="int-link">music</a>-->
-			<a href="#capitalism" class="int-link">hire me</a>
-			<a href="#contact" class="int-link">contact</a>
-		</p>
-		<img src="me.jpg" alt="me eating pizza" />
-		<!--
-		<p id="tagline">
-			Software engineer and musician.
-		</p>
-		-->
-	</div>
+<h1 id="top" class="center-width">christopher cooper</h1>
+<div id="main-container" class="center-width home">
+	{% comment %}
+	{% include sm-links.html %}
+	{% endcomment %}
 
-
-	<h3>
-		about me
-	</h3>
-
-	<p>
-		I'm Christopher. I love code, music, coffee, and rhythm games. <a href="#capitalism" class="int-link">Hire me?</a>
-	</p>
-
-	{% include sm-links.html resume=true %}
-
-	<h3>
+	<h2>
 		recent posts
-	</h3>
+	</h2>
 	{% for post in site.posts limit: 3 %}
-		<p class="home-post-title">
-			<a href="{{ post.url }}" class="mono-link">{{ post.title }}</a>
-		</p>
-		<p class="home-post-summary">
+		<p>
+			<a href="{{ post.url }}" class="display-link">{{ post.title }}</a>
+			<br />
 			{{ post.date | date: '%F' }}
 			{%- if post.summary -%}
 				: {{ post.summary }}
 			{%- endif -%}
 		</p>
 	{% endfor %}
-	<p><a href="/blog" class="mono-link">more posts...</a></p>
+	<p><a href="/blog" class="display-link">more posts…</a></p>
 
-	<p>For more frequent, shorter posts, see <a href="https://notes.cg505.com" class="mono-link">my notes</a>.</p>
+	<p>For more frequent, shorter posts, see <a href="https://notes.cg505.com">my notes</a>.</p>
 
 	<div id="code" class="placeholder"></div>
-	<h3>
+	<h2>
 		code
-	</h3>
+	</h2>
 
 	<p>
 		I'm currently on the core team for <a href="https://github.com/skypilot-org/skypilot">SkyPilot</a>.
 	</p>
 
 	<p>
-		Databricks: software engineering (2021 - 2023)
+		I have also made major contributions to <a href="https://github.com/zkldi/Tachi">Tachi</a>.
 	</p>
 
 	<p>
-		Kelda: software engineering (2020)
+		prev. Databricks: software engineering (2021 - 2023)
 	</p>
 
 	<p>
-		<a href="https://www.ocf.berkeley.edu/">Open Computing Facility</a> at UC Berkeley: top leadership role and top technical role (2018 - 2020)
+		prev. Kelda: software engineering (2020)
 	</p>
 
+	<p>
+		prev. <a href="https://www.ocf.berkeley.edu/">Open Computing Facility</a> at UC Berkeley: general manager, site manager (2018 - 2020)
+	</p>
+
+	<!--
 	<p>
 		See my <a href="/resume.pdf">resume</a> for more details.
 	</p>
+	-->
 
-	<!-- add some stuff on open source contributions (Tachi?) -->
-
-
-	<!-- yeeting this whole section for now 😭
 	<div id="music" class="placeholder"></div>
-	<h3>
+	<h2>
 		music
-	</h3>
+	</h2>
+	<p>
+		I occasionally post dj mixes to my <a href="https://soundcloud.com/cg505">soundcloud</a>.
+	</p>
+
+	<p>
+		I also use <a href="https://last.fm/user/cg505">last.fm</a>.
+	</p>
+
+	<!--
 	<p>
 		I like jazz. In fall 2018, I played alto saxophone in a combo at <a href="https://ucjazz.berkeley.edu/">UC Jazz</a> with fellow Cal students. At Purdue I played alto sax in the <a href="https://www.purdue.edu/bands/ensembles/jazz/">Purdue Jazz Band</a>. Check out our rendition of <a href="https://www.youtube.com/watch?v=nJ6eGiIaIgM">"Angel Eyes"</a> featuring yours truly.
 	</p>
@@ -141,21 +101,10 @@
 	-->
 
 
-	<div id="capitalism" class="placeholder"></div>
-	<h3>
-		give me job
-	</h3>
-	<p>
-		I'm looking for software engineering roles at a mid-to-senior level. Bonus points if you are remote, working on interesting distributed systems, or run on a 4-day work week.
-	</p>
-	<p>
-		Shoot me an email at <a href="mailto:christopher@cg505.com">christopher@cg505.com</a>.
-	</p>
-
 	<div id="contact" class="placeholder"></div>
-	<h3>
+	<h2>
 		contact me
-	</h3>
+	</h2>
 	<p>
 		email: <a href="mailto:christopher@cg505.com">christopher@cg505.com</a>
 	</p>
