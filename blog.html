@@ -3,6 +3,8 @@
 <!doctype html>
 <html lang="en">
 <title>{{ site.title }}</title>
+<link rel="preconnect" href="https://rsms.me/">
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 <link rel="stylesheet" href="/style.css">
 <link rel="alternate icon" type="image/png" href="/favicon.png">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -13,13 +15,12 @@
 
 <h1 id="top" class="center-width wide">{{ site.title }}</h1>
 <div id="main-container" class="center-width wide">
-	<!-- <p>{{ site.description }}</p> -->
-	{% comment %}
-	{% include sm-links.html %}
-	{% endcomment %}
-	<a class="display-link" href="/">about me</a>
-	<span>/</span>
-	<a class="display-link" rel="me" href="https://notes.cg505.com">notes</a>
+	<p>
+		<a class="display-link" href="/">about me</a>
+		/
+		<a class="display-link" rel="me" href="https://notes.cg505.com">notes</a>
+	</p>
+
 	<h2>all posts</h2>
 	{% for post in site.posts %}
 		<p class="post-info">

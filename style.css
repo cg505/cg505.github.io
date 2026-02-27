@@ -1,88 +1,36 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
-
-   @font-face {
-   font-family: 'Azeret Mono';
-   font-style: italic;
-   font-weight: 100 900;
-   font-display: swap;
-   src:
-   local("Azeret Mono"),
-   url(/font/AzeretMono/AzeretMono-Italic-VariableFont_wght.ttf);
-   }
-
-   @font-face {
-   font-family: 'Azeret Mono';
-   font-style: normal;
-   font-weight: 100 900;
-   font-display: swap;
-   src:
-   local("Azeret Mono"),
-   url(/font/AzeretMono/AzeretMono-VariableFont_wght.ttf);
-   } */
-
-@font-feature-values Azeret Mono {
-	@styleset {
-		/* This is not exhaustive, just the ones I care about.
-		   Grabbed using https://wakamaifondue.com/ */
-		simple-a: 1;
-		upright-M: 9;
-		straight-y: 15;
+/* https://rsms.me/inter/download/ */
+:root {
+	font-family: Inter, sans-serif;
+	font-feature-settings: 'liga' 1, 'calt' 1; */ /* fix for Chrome */
+}
+@supports (font-variation-settings: normal) {
+	:root {
+		font-family: InterVariable, sans-serif;
 	}
 }
 
-:root {
-	--background-green: #00791b;
-	--green-text: #00791b;
-}
-
-/* @media (prefers-color-scheme: dark) {
-   :root {
-   --green-text: #00cc2c;
-   }
-   body {
-   background-color: #222;
-   color: white;
-   }
-   } */
-
 h1,h2,h3 {
-	/* Fallback fonts help avoid broken stacking context during FOUC.
-	   Notably, Noto Sans Mono doesn't work. Other monospace styles can safely
-	   just use monospace family. */
-	/* font-family: 'Azeret Mono', 'Anonymous Pro', 'DejaVu Sans Mono', 'Liberation Mono', 'Fira Mono', 'Fira Code', monospace; */
-	font-variant-alternates: styleset(simple-a, upright-M, straight-y);
-	font-variant-ligatures: discretionary-ligatures;
-	font-weight: normal;
+	font-weight: inherit;
+	font-variant-alternates: character-variant(simplified-u);
+	text-align: initial;
 }
 
 h1 {
-	font-size: 30pt;
+	font-size: calc(8em / 3);
 	line-height: 0.8;
 	text-wrap: balance;
+	@supports not (font-variation-settings: normal) {
+		font-family: InterDisplay, sans-serif;
+	}
 }
 
-.greentext {
-	/* color: var(--green-text); */
-}
-
-/* TODO: remove wide and use home instead (opposite) */
-/* also - .center-width and #main-container are the same thing now */
 .home h2 {
-	/* color: var(--green-text); */
 	margin-top: 1.5em;
 	margin-bottom: 0;
 }
-/* h2 {
-   font-size: 25pt;
-   } */
-
-
-/* h3 {
-   font-size: 20pt;
-   color: var(--green-text);
-   } */
 
 .center-width {
+	margin: auto;
 	/*
 	vw > 600 -> 400px
 	vw = 600 -> 2/3 of vw
@@ -91,7 +39,6 @@ h1 {
 	vw < 300 -> leave 5px margin either side
 	*/
 	max-width: min(33.33% + 200px, 400px, 100% - 10px);
-	margin: auto;
 }
 
 .center-width.wide {
@@ -103,24 +50,11 @@ h1 {
 	vw < 300 -> leave 5px margin either side
 	*/
 	max-width: min(50% + 150px, 600px, 100% - 10px);
-	//max-width: min(66%, 600px);
 }
 
 #main-container {
 	border: 1px solid #000;
-	padding: 0;
-	/* padding: 15px 20px; */
-	margin: auto;
 }
-
-/* h1, h2, h3, h4, .display-link {
-   font-family:
-   'Jost',
-   'Cantarell',
-   'IBM Plex Sans',
-   'Source Sans 3', 'Source Sans', 'Source Sans Pro', 'Source Sans Variable' / * what a mess lol * /,
-   sans-serif;
-   } */
 
 body {
 	font-size: 93.75%;
@@ -128,83 +62,26 @@ body {
 	line-height: 1;
 	margin: 0px;
 	padding-bottom: 140px;
-	font-family:
-		/* todo: clean this up and make sure inter is provided */
-		'Inter',
-		'Open Sans',
-		'Cantarell',
-		'IBM Plex Sans',
-		'Source Sans 3', 'Source Sans', 'Source Sans Pro', 'Source Sans Variable' /* what a mess lol */,
-		sans-serif;
+	font-weight: 370;
 	text-align: justify;
 	hyphens: auto;
+	font-variant: discretionary-ligatures;
 }
 
 #top {
 	padding-top: 20vh;
 }
 
-#header {
-	position: relative;
-	margin-top: 0px;
-}
-
 a {
 	color: inherit;
-	/* color: var(--green-text); */
 }
 
 a.display-link {
-	color: inherit;
-	//font-family: 'Azeret Mono', monospace;
-	//font-variant-alternates: styleset(/* leave double-story a for small legibility */ upright-M, straight-y);
-	//font-variant-ligatures: discretionary-ligatures;
-	//font-weight: 500;
 	font-size: larger;
 }
 
-.sm-links {
-	display: flex;
-	width: 100%;
-	justify-content: space-between;
-}
-
-.sm-links > a {
-	margin: 0;
-}
-
-a.int-link {
-	text-decoration-color: rgba(0, 0, 0, 0);
-	font-family: inherit;
-	transition: text-decoration-color .5s;
-}
-
-a.int-link:hover {
-	text-decoration-color: revert;
-	transition: text-decoration-color 0s;
-}
-
-code {
-	font-family: 'Azeret Mono', monospace;
-	font-variant-alternates: styleset(straight-a, upright-M, straight-y);
-	font-variant-ligatures: none;
-	font-variant-numeric: slashed-zero;
-}
-
-/* @media (max-width: 900px) {
-   #main-container {
-   max-width: 100%;
-   }
-   } */
-
-#copyright {
-	color: #767676;
-	font-size: 10pt;
-	margin-top: 42px;
-}
-
 .vid-container-container {
-	max-width: 560px;
+	max-width: 600px;
 }
 
 .vid-container {
@@ -227,294 +104,7 @@ code {
 	height: 100%;
 }
 
-
-/* index*/
-
-h1,h2,h3 {
-	/* margin: 0px; */
-	text-align: initial;
-}
-
-/* h1 {
-   margin-right: 15px;
-   } */
-
-#cg505 h1, #top-bar h2, #floating-bar h2 {
-	animation: onload-top 2.2s ease-in;
-}
-
-@media (prefers-reduced-motion) {
-	#cg505 h1, #top-bar h2, #floating-bar h2 {
-		animation: none;
-	}
-}
-
-#stacking-context {
-	top: 0px;
-	position: relative;
-	z-index: 1;
-}
-
-#stacking-context > div {
-	color: #ffffff;
-	margin-top: 0px;
-	top: 0px;
-	width: 100%;
-}
-
-#stacking-context .container {
-	max-width: min(66%, 800px);
-	margin: auto;
-	overflow: hidden;
-	white-space: nowrap;
-	padding: 20px 20px 10px 20px;
-}
-
-#stacking-context > #cg505 {
-	position: fixed;
-	z-index: 5;
-	/* background-color: #000000; */
-	height: 84px;
-}
-
-#stacking-context > #concealer {
-	color: rgba(0, 0, 0, 0);
-	position: relative;
-	background-color: var(--background-green);
-	z-index: 4;
-	height: 84px;
-}
-
-#concealer > .container {
-	padding-bottom: 0px;
-}
-
-#stacking-context > #floating-bar {
-	position: fixed;
-	z-index: 3;
-	background-color: var(--background-green);
-	height: 84px;
-}
-
-#floating-bar > .container {
-	padding-bottom: 0px;
-}
-
-#floating-bar h1, #floating-bar h2 {
-	display: inline;
-}
-
-#floating-bar h1 {
-	color: rgba(0, 0, 0, 0);
-}
-
-#stacking-context > #top-bar {
-	position: relative;
-	z-index: 2;
-	margin-top: -84px;
-	background-color: var(--background-green);
-	height: 134px;
-}
-
-#top-bar h1 {
-	color: rgba(0, 0, 0, 0);
-	height: 64px;
-}
-
-#stacking-context > #floating-bar-ext {
-	position: fixed;
-	color: rgba(0, 0, 0, 0);
-	background-color: var(--background-green);
-	z-index: 1;
-	height: 94px;
-}
-
-@keyframes onload-top {
-	from {
-		color: var(--background-green);
-	}
-	to {
-		color: #ffffff;
-	}
-}
-
-@keyframes onload-body {
-	from {
-		margin-top: -30px;
-		opacity: 0;
-	}
-	to {
-		margin-top: 0px;
-		opacity: 1;
-	}
-}
-
-@keyframes onload-img {
-	from {
-		filter: blur(5px);
-	}
-	to {
-		filter: none;
-	}
-}
-
-h3 {
-	padding-top: 30px;
-}
-
-#main-container {
-	/* animation: onload-body 1s ease-out; */
-}
-
-@media (prefers-reduced-motion) {
-	#main-container {
-		animation: none;
-	}
-}
-
-#header #mobile-nav {
-	text-align: center;
-	margin: 0px;
-	display: none;
-	line-height: 0;
-}
-
-#header #mobile-nav a {
-	line-height: 100%;
-	display: inline-block;
-	padding: 0 14px;
-}
-
-#header #mobile-nav:after {
-	content: '';
-	display: inline-block;
-	width: 100%;
-}
-
-#header img {
-	margin-top: 10px;
-	width: 100%;
-	animation: onload-img 1.5s ease-out;
-}
-
-@media (prefers-reduced-motion) {
-	#header img {
-		animation: none;
-	}
-}
-
-#header #tagline {
-	position: absolute;
-	left: 6%;
-	bottom: 10px;
-	max-width: 220px;
-	width: 50%;
-	color: #fff;
-	font-size: 15pt;
-	margin: 0px;
-	text-shadow: #000 0px 0px 4px;
-}
-
-.placeholder {
-	position:relative;
-	top: -80px;
-}
-
-iframe#sc {
-	max-width: 800px;
-}
-
-@media (max-width: 900px) {
-	#stacking-context .container {
-		max-width: 100%;
-	}
-}
-
-@media (max-width: 440px) {
-	#stacking-context > #top-bar {
-		height: 123px;
-	}
-	#top-bar h2 {
-		font-size: 18pt;
-	}
-}
-
-@media (max-width: 630px) {
-	#floating-bar h2 {
-		font-size: 18pt;
-	}
-}
-
-@media (max-width: 520px) {
-	/* #floating-bar h1{
-	   font-size: 25pt;
-	   } */
-	/* #cg505 h1, .floating-bar h2 {
-	   display: block;
-	   } */
-	/* #floating-bar > #container {
-	   padding-top: 15px;
-	   } */
-
-	/* #stacking-context > #top-bar {
-	   z-index: 7;
-	   }
-	   #stacking-context > #floating-bar {
-	   z-index: 6;
-	   } */
-	#floating-bar h1 {
-		color: #ffffff;
-		animation: onload-top 2.2s ease-in;
-	}
-	@media (prefers-reduced-motion) {
-		#floating-bar h1 {
-			animation: none;
-		}
-	}
-	#floating-bar h1, #floating-bar h2 {
-		display: block;
-	}
-	#floating-bar h1 {
-		font-size: 25pt;
-		height: 40px;
-	}
-	#floating-bar h2 {
-		/* margin-top: x; */
-	}
-	#floating-bar > .container {
-		padding-top: 15px;
-	}
-	#floating-bar-ext {
-		/* display: none; */
-	}
-	#stacking-context > #cg505 {
-		position: relative;
-	}
-	#stacking-context > #concealer {
-		top: -84px;
-	}
-	#stacking-context > #top-bar {
-		margin-top: -168px;
-	}
-
-	#header #mobile-nav {
-		display: block;
-	}
-}
-
-/* .home-post-title {
-   margin-bottom: 3px;
-   }
-
-   .home-post-summary {
-   margin-top: 0;
-   } */
-
-// blog
-.list-title {
-	margin-bottom: 5px;
-}
-
+/* blog */
 .post-info {
 	margin-bottom: 0;
 }
@@ -527,63 +117,9 @@ iframe#sc {
 	margin-top: 0;
 }
 
-/* .post-info {
-   color: #767676;
-   font-size: 1.2em;
-   margin-top: 0.5em;
-   }
-
-   .post-info.small {
-   font-size: smaller;
-   margin: 0;
-   } */
-
-.list-summary {
-	font-size: 16pt;
-	margin-top: 10px;
-}
-
-.signoff {
-	text-align: right;
-	font-style: italic;
-	color: var(--green-text);
-}
-
-#blog-banner {
-	background-color: var(--background-green);
-	width: 100%;
-	text-decoration: none;
-	display: block;
-}
-
-.container {
-	max-width: min(66%, 800px);
-	margin: auto;
-	padding: 10px 20px;
-}
-
-#blog-banner .container {
-	padding-top: 20px;
-}
-
-#blog-banner h1, #blog-banner h2 {
-	margin: 0;
-	color: #fff;
-}
-
-/* @media (max-width: 900px) {
-   .container {
-   max-width: 100%;
-   }
-   }
- */
 img {
 	max-width: 100%;
 }
-
-/* p#summary {
-   margin-top: 0;
-   } */
 
 /* no margin bottom of main container box */
 #main-container > :first-child,
@@ -598,9 +134,6 @@ img {
 #main-container > :last-child > :last-child > :last-child > :last-child {
 	margin-bottom: 0;
 }
-/* p, .footnotes ol {
-   margin-bottom: 0;
-   } */
 
 .home p {
 	margin-top: 0.2em;
